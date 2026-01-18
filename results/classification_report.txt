@@ -1,0 +1,12 @@
+FreshScanAI - Classification Report
+======================================================================
+
+                  precision    recall  f1-score   support
+
+           Fresh     0.9591    0.9831    0.9710      2076
+Slightly_Spoiled     0.5099    0.3513    0.4160      1170
+          Rotten     0.4939    0.6256    0.5520      1170
+
+        accuracy                         0.7210      4416
+       macro avg     0.6543    0.6534    0.6463      4416
+    weighted avg     0.7169    0.7210    0.7129      4416
