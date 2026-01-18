@@ -148,6 +148,16 @@ unzip fruitquality1.zip -d data/raw/
 2. Click "Download" button
 3. Extract to `data/raw/` folder
 
+### Preprocess Dataset
+
+After downloading, organize the data:
+
+```bash
+python preprocessing.py
+```
+
+This creates train/val/test splits in `data/processed/`
+
 ### Dataset Structure
 
 After extraction, your structure should look like:
@@ -218,6 +228,25 @@ python evaluate.py
 - ROC curves: `results/roc_curves.png`
 - Classification report: `results/classification_report.txt`
 - Evaluation report: `results/evaluation_report.json`
+
+### 4. Continue Training (Fine-tuning)
+
+If you want to improve the pre-trained model with your own data:
+
+```bash
+python continue_training.py
+```
+
+**This allows you to:**
+- Load the existing trained model (`freshscan_model.h5`)
+- Continue training with your own dataset
+- Fine-tune with lower learning rate (0.0001)
+- Save improved model as `freshscan_model_retrained.h5`
+
+**Perfect for:**
+- Adding more data to improve accuracy
+- Training on specific food types
+- Customizing the model for your use case
 
 ### 4. Make Predictions
 
